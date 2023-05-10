@@ -1,5 +1,6 @@
 ![Credential Manager ]
 
+NOTE: This code was adapted from [this Google codelab](https://codelabs.developers.google.com/credential-manager-api-for-android) for Credential Manager:
 
 Credentials Manager Sample App
 ==================

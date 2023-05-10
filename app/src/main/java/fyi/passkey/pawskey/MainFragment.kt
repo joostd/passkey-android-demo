@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.credentialmanager.sample
+package fyi.passkey.pawskey
 
 import android.content.Context
 import android.os.Bundle
@@ -22,53 +22,50 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.google.credentialmanager.sample.databinding.FragmentHomeBinding
+import fyi.passkey.pawskey.databinding.FragmentMainBinding
 
-class HomeFragment : Fragment() {
+class MainFragment : Fragment() {
 
-    private lateinit var binding: FragmentHomeBinding
-    private lateinit var listener: HomeFragmentCallback
-
-    companion object {
-        private const val LOGGED_IN_THROUGH_PASSWORD = "Logged in successfully through password"
-        private const val LOGGED_IN_THROUGH_PASSKEYS = "Logged in successfully through passkeys"
-    }
+    private lateinit var listener: MainFragmentCallback
+    private var _binding: FragmentMainBinding? = null
+    private val binding get() = _binding!!
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
         try {
-            listener = context as HomeFragmentCallback
+            listener = context as MainFragmentCallback
         } catch (castException: ClassCastException) {
             /** The activity does not implement the listener.  */
         }
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View {
-        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentMainBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.signUp.setOnClickListener {
+            listener.signup()
+        }
 
-        configureSignedInText()
-
-        binding.logout.setOnClickListener {
-            listener.logout()
+        binding.signIn.setOnClickListener {
+            listener.signIn()
         }
     }
 
-    private fun configureSignedInText() {
-        if (DataProvider.isSignedInThroughPasskeys()) {
-            binding.signedInText.text = LOGGED_IN_THROUGH_PASSKEYS
-        } else {
-            binding.signedInText.text = LOGGED_IN_THROUGH_PASSWORD
-        }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
-    interface HomeFragmentCallback {
-        fun logout()
+    interface MainFragmentCallback {
+        fun signup()
+        fun signIn()
     }
 }

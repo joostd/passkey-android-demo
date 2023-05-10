@@ -30,14 +30,14 @@ def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
-    namespace 'com.google.credentialmanager.sample'
+    namespace 'fyi.passkey.pawskey'
     compileSdkVersion 33
     defaultConfig {
-        applicationId "com.google.credentialmanager.sample"
+        applicationId "fyi.passkey.pawskey"
         minSdk 21
         targetSdk 33
         versionCode 1
-        versionName "1.0"
+        versionName "1.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.credentialmanager.sample
+package fyi.passkey.pawskey
 
 import android.content.Context
 import android.os.Bundle
@@ -28,7 +28,7 @@ import androidx.credentials.GetPublicKeyCredentialOption
 import androidx.credentials.PublicKeyCredential
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import com.google.credentialmanager.sample.databinding.FragmentSignInBinding
+import fyi.passkey.pawskey.databinding.FragmentSignInBinding
 import kotlinx.coroutines.launch
 
 class SignInFragment : Fragment() {

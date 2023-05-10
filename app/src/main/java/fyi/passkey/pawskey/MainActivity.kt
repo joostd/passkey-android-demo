@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.google.credentialmanager.sample
+package fyi.passkey.pawskey
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import com.google.credentialmanager.sample.HomeFragment.HomeFragmentCallback
-import com.google.credentialmanager.sample.MainFragment.MainFragmentCallback
-import com.google.credentialmanager.sample.R.id
-import com.google.credentialmanager.sample.SignInFragment.SignInFragmentCallback
-import com.google.credentialmanager.sample.SignUpFragment.SignUpFragmentCallback
-import com.google.credentialmanager.sample.databinding.ActivityMainBinding
+import fyi.passkey.pawskey.HomeFragment.HomeFragmentCallback
+import fyi.passkey.pawskey.MainFragment.MainFragmentCallback
+import fyi.passkey.pawskey.R.id
+import fyi.passkey.pawskey.SignInFragment.SignInFragmentCallback
+import fyi.passkey.pawskey.SignUpFragment.SignUpFragmentCallback
+import fyi.passkey.pawskey.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), MainFragmentCallback, HomeFragmentCallback,
     SignInFragmentCallback, SignUpFragmentCallback {

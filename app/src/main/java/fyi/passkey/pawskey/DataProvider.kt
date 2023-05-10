@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.credentialmanager.sample
+package fyi.passkey.pawskey
 
 import android.content.Context
 import android.content.SharedPreferences

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.credentialmanager.sample
+package fyi.passkey.pawskey
 
 import android.content.Context
 import android.os.Bundle
@@ -37,7 +37,7 @@ import androidx.credentials.exceptions.CreateCustomCredentialException
 import androidx.credentials.exceptions.publickeycredential.CreatePublicKeyCredentialDomException
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import com.google.credentialmanager.sample.databinding.FragmentSignUpBinding
+import fyi.passkey.pawskey.databinding.FragmentSignUpBinding
 import kotlinx.coroutines.launch
 import java.security.SecureRandom
 

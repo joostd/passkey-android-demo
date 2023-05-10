@@ -1,7 +1,7 @@
 {
     "challenge": "<challenge>",
     "rp": {
-        "id": "passkeys-codelab.glitch.me",
+        "id": "rp.joostd.nl",
         "name": "CredMan App Test"
     },
     "pubKeyCredParams": [
